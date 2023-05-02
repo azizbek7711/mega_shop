@@ -1,0 +1,19 @@
+.products-img img {
+  width: 100px;
+  height: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.products td, .products th {
+  border: none;
+}
+
+@media screen and (max-width: 425.5px) {
+  table {
+    font-size: 13px !important;
+  }
+  table img {
+    width: 80px !important;
+    height: 60px !important;
+  }
+}

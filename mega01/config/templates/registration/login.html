@@ -1,0 +1,16 @@
+
+{% extends 'register.html' %}
+
+{% block title %} Kirish {% endblock title %}
+{% block content %}
+  <h2> sayitga kirish </h2>
+   <form method="post">{% csrf_token %}
+       {{ form.as_p }}
+       <button type="submit"> Kirish </button>
+       <a href="{% url 'password_reset' %}" role="button" > Kalit sozni tiklash</a>
+       <br>
+       <a href="{% url 'signup' %}">
+                    Ro'yhatdan o'tish
+       </a>
+   </form>
+{% endblock content %}

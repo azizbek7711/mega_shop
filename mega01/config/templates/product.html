@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Product{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+{% endblock css %}
+
+{% block js %}
+<script src="{% static 'js/product.js' %}"></script>
+{% endblock js %}
+
+{% block content %}
+<div class="d-flex justify-content-between p-3 align-items-center px-4">
+    <h1 class="m-0 p-0">Cars</h1>
+    <a href=".." class="text-decoration-none text-dark pe-3">
+        <i class="fa fa-chevron-left"></i>
+    </a>
+</div>
+
+<!-- ! Product -->
+<div class="d-flex product">
+    <div class="product-item p-3">
+        <div class="d-block d-md-flex">
+            <div class="product--img w-50 text-decoration-none text-dark">
+                <div class="sliderWrap">
+                    <div class="slides">
+                        <div class="slidee">
+                            <img src="{% static 'img/hyundai.jpg' %%}" alt="Hyundai">
+                        </div>
+                        <div class="slidee">
+                            <img src="{% static 'img/ing.jpg' %%}" alt="Hyundai">
+                        </div>
+                        <div class="slidee">
+                            <img src="{% static 'img/hyundai.jpg' %%}" alt="Hyundai">
+                        </div>
+                    </div>
+                    <div class="slider-indicatorss">
+                        <span class="activee"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product--info w-50 position-relative">
+                <h3>Hyundai electro car</h3>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero soluta consequuntur laudantium vitae quidem magnam, facere exercitationem nobis maxime provident magni dolores nihil fugit earum deserunt incidunt quasi rerum!</div>
+                <p class="fw-bold fs-5 m-0 mt-3">+998 91 234 56 78</p>
+                <p class="text-secondary m-0">Tashkent, Mirabad</p>
+                <b>55 000 000 000 sum</b>
+                <div class="buymenu d-flex align-items-center">
+                    <button class="btn btn-warning rounded-1 me-2">
+                        <a href="#" class="text-decoration-none text-dark">
+                            Add to cart
+                        </a>
+                    </button>
+                    <button class="btn btn-danger rounded-1 me-2">
+                        <a href="#" class="text-decoration-none text-light">
+                            Buy now
+                        </a>
+                    </button>
+                    <button class="btn btn-light">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <i class="fa fa-heart m-0"></i>
+                            <p class="m-0 p-0 fs-6">12</p>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-2 mt-3">
+            <h3>About this product</h3>
+            <ul class="list-unstyled">
+                <li> - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum tempora eveniet enim accusamus asperiores facere officia maxime itaque architecto ipsa.</li>
+                <li> - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum tempora eveniet enim accusamus asperiores facere officia maxime itaque architecto ipsa.</li>
+                <li> - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum tempora eveniet enim accusamus asperiores facere officia maxime itaque architecto ipsa.</li>
+                <li> - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum tempora eveniet enim accusamus asperiores facere officia maxime itaque architecto ipsa.</li>
+            </ul>
+        </div>
+    </div>    
+</div>
+{% endblock content %}

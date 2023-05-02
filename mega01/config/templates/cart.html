@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cart{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock css %}
+
+{% block js %}
+<script src="{% static 'js/cart.js' %}"></script>
+{% endblock js %}
+
+{% block content %}
+    <div class="cart-container">
+        <div class="cart-wrap">
+            <div class="total-cart">
+                <h3>Shopping cart(<span>0</span>)</h3>
+                <label class="choose-all">
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </div>
+                    <p>Choose all</p>
+                </label>
+            </div>
+            <div class="carts">
+                <script>
+                    var card = []
+                    {% comment %} Misol uchin raqamlar bilan qildim. in object_list qilib ishlatib ketaverasiz {% endcomment %}
+                    {% for i in '0123456789'|make_list %}    
+                        var newItem = {
+                            name: 'car',
+                            text: 'lorem ipadawk daopw kdpoawdpas ',
+                            src: "{% static 'img/hyundai.jpg' %}",
+                            price: 100,
+                            total: 3,
+                            address: 'Tashkent, Qibray',
+                        }
+                        card.push(newItem)
+                    {% endfor %}
+              </script>
+            </div>
+        </div>
+        <form action="#">
+            <h3>Order price</h3>
+            <div>
+                <span>Total</span>
+                <span class="form-total">0</span>
+            </div>
+            <div>
+                <span>Price</span>
+                <span>
+                  $<span class="form-price">0</span>
+                </span>
+              </div>
+            <button>Buy</button>
+        </form>
+    </div>
+
+    <template id="cart">
+      <label class="cart">
+        <div class="cart-item1">
+            <div class="checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </div>
+            <span>
+                <img src="..." alt="Product">
+            </span>
+            <div class="cart-item1__info">
+                <h3>Broom</h3>
+                <p class="text">Lorem ipsum dolor sit amet.</p>
+                <p class="address m-0 text-secondary">address</p>
+                <p class="cost">$</p>
+            </div>
+        </div>
+        <div class="cart-item2">
+            <button class="delete-cart">
+                <i class="fa fa-trash-alt"></i>
+            </button>
+            <div class="total-brooms">
+                <button class="dec">-</button>
+                    <input type="number" class="totalInp" inputmode="numeric" value="1">
+                <button class="inc">+</button>
+            </div>
+            <button class="buy-this__btn">Buy this</button>
+        </div>
+      </label>
+    </template>
+{% endblock content %}

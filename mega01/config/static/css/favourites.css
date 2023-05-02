@@ -1,0 +1,17 @@
+.fav--img img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .fav--img img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .fav--info {
+    padding-bottom: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */

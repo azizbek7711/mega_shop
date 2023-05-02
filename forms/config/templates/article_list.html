@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Postlar {% endblock title %}
+
+{% block content %}
+
+  {% for article in object_list %}
+
+       <a href="{% url 'article_detail' article.pk %}"><h2>{{ article.title }}</h2></a>
+
+       {% if article.photo %}
+           <img class="card-img-top" src="{{ article.photo.url }}"  alt="{{ article.title }}">
+           {{ article.photo.url }} ,{{ article.title }}
+       {% endif %}
+
+           {{ article.summary }}... <a href="{% url 'article_detail' article.pk %}"> batafsil </a>
+           muallif {{ article.author | title }}, {{ article.date }}
+  {% endfor %}
+
+
+{% endblock content %}

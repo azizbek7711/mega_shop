@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Categories{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/ctg.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+<h1 class="p-2 ps-4">Categories</h1>
+<div class="row ctgs p-3 g-0">
+<!--    <div>-->
+<!--        <button>-->
+<!--                <a href="{% url 'article_new' %}">yangi post qoshish</a>-->
+<!--                <h3><a href="{% url 'article_list' %}"> Barcha postlar</a></h3>-->
+
+<!--        </button>-->
+<!--    </div>-->
+    <div class="col-6 col-sm-4 col-lg-3 col-xxl-2 ctgs-item">
+        <button>
+                <a href="{% url 'article_new' %}">yangi post qo'shish</a>
+                <h3><a href="{% url 'article_list' %}"> Barcha postlar</a></h3>
+
+        </button>
+    </div>
+
+    <div class="col-6 col-sm-4 col-lg-3 col-xxl-2 ctgs-item">
+        <a href="#" style="background-image: url(/static/img/ball.webp);">
+            <h3>Zargarlik mahsulotlari</h3>
+        </a>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-3 col-xxl-2 ctgs-item">
+        <a href="#" style="background-image: url(/static/img/cleaner.png);">
+            <h3>Zargarlik mahsulotlari</h3>
+        </a>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-3 col-xxl-2 ctgs-item">
+        <a href="#" style="background-image: url(/static/img/komp.png);">
+            <h3>Zargarlik mahsulotlari</h3>
+        </a>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-3 col-xxl-2 ctgs-item">
+        <a href="#" style="background-image: url(/static/img/kros.png);">
+            <h3>Zargarlik mahsulotlari</h3>
+        </a>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-3 col-xxl-2 ctgs-item">
+        <a href="#" style="background-image: url(/static/img/phonectg.webp);">
+            <h3>Zargarlik mahsulotlari</h3>
+        </a>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-3 col-xxl-2 ctgs-item">
+        <a href="#" style="background-image: url(/static/img/uzuk.png);">
+            <h3>Zargarlik mahsulotlari</h3>
+        </a>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-3 col-xxl-2 ctgs-item">
+        <a href="#" style="background-image: url(/static/img/mebel.png);">
+            <h3>Zargarlik mahsulotlari</h3>
+        </a>
+    </div>
+</div>
+
+<!-- Recommendation -->
+<div class="rec mt-5">
+    <h2 class="p-2 ps-4">Recommendation</h2>
+    <div class="rec-wrap">
+        <a href="#" class="rec-item shadow text-decoration-none text-dark rounded">
+            <div class="rec-picture">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+            </div>
+            <div class="rec-info">
+                <h3 class="rec--name fs-2 mb-3">Hyundai car</h3>
+                <p class="rec--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                <p class="rec--price fw-bold">455 500 000.00 UZS</p>
+            </div>
+        </a>
+        <a href="#" class="rec-item shadow text-decoration-none text-dark rounded">
+            <div class="rec-picture">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">            </div>
+            <div class="rec-info">
+                <h3 class="rec--name fs-2 mb-3">Hyundai car</h3>
+                <p class="rec--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                <p class="rec--price fw-bold">455 500 000.00 UZS</p>
+            </div>
+        </a>
+        <a href="#" class="rec-item shadow text-decoration-none text-dark rounded">
+            <div class="rec-picture">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">            </div>
+            <div class="rec-info">
+                <h3 class="rec--name fs-2 mb-3">Hyundai car</h3>
+                <p class="rec--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                <p class="rec--price fw-bold">455 500 000.00 UZS</p>
+            </div>
+        </a>
+        <a href="#" class="rec-item shadow text-decoration-none text-dark rounded">
+            <div class="rec-picture">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">            </div>
+            <div class="rec-info">
+                <h3 class="rec--name fs-2 mb-3">Hyundai car</h3>
+                <p class="rec--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                <p class="rec--price fw-bold">455 500 000.00 UZS</p>
+            </div>
+        </a>
+        <a href="#" class="rec-item shadow text-decoration-none text-dark rounded">
+            <div class="rec-picture">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">            </div>
+            <div class="rec-info">
+                <h3 class="rec--name fs-2 mb-3">Hyundai car</h3>
+                <p class="rec--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                <p class="rec--price fw-bold">455 500 000.00 UZS</p>
+            </div>
+        </a>
+        <a href="#" class="rec-item shadow text-decoration-none text-dark rounded">
+            <div class="rec-picture">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">            </div>
+            <div class="rec-info">
+                <h3 class="rec--name fs-2 mb-3">Hyundai car</h3>
+                <p class="rec--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                <p class="rec--price fw-bold">455 500 000.00 UZS</p>
+            </div>
+        </a>
+        <a href="#" class="rec-item shadow text-decoration-none text-dark rounded">
+            <div class="rec-picture">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">            </div>
+            <div class="rec-info">
+                <h3 class="rec--name fs-2 mb-3">Hyundai car</h3>
+                <p class="rec--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                <p class="rec--price fw-bold">455 500 000.00 UZS</p>
+            </div>
+        </a>
+        <a href="#" class="rec-item shadow text-decoration-none text-dark rounded">
+            <div class="rec-picture">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">            </div>
+            <div class="rec-info">
+                <h3 class="rec--name fs-2 mb-3">Hyundai car</h3>
+                <p class="rec--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                <p class="rec--price fw-bold">455 500 000.00 UZS</p>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock content %}

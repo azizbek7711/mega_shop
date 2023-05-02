@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+{% endblock css %}
+
+{% block js %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock js %}
+
+{% block content %}
+<div class="sliderWrap">
+    <div class="slidess">
+        <div class="slidee">
+            <h2>MegaShop siz uchun qulay va sifatli xaridlar maskani</h2>
+            <button>
+                <a href="{% url 'signup' %}">
+                    Ro'yhatdan o'tish
+                </a>
+                <br>
+                <a href="{% url 'login' %}">
+                    Kirish
+                </a>
+                 <h1><a href="{% url 'logout' %}" > chiqib ketish </a></h1>
+            </button>
+
+
+        </div>
+        <div class="slidee">
+            <h2>MegaShopda mega CHEGIRMAlar</h2>
+        </div>
+        <div class="slidee">
+            <h2>MegaShop - ayolingiz uchun yordamchi tanlashga yordam beradi</h2>
+        </div>
+    </div>
+    <div class="slider-indicatorss">
+        <span class="activee"></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+        
+<main>
+    <section class="category pt-5">
+        <h2 class="ps-4 fs-1">Turkumlar</h2>
+        <ul class="category-wrap list-unstyled text-center">
+            <li class="category-item">
+                <a href="{% url 'ctg' %}">
+                    <div class="category-img">
+                        <img src="{% static 'img/category.webp' %}" alt="Category">
+                    </div>
+                    <span>Barcha turkumlar</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/phone.webp' %}" alt="phone">
+                    </div>
+                    <span>Telefon va Aksessuarlar</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/clothes.webp' %}" alt="Clothes">
+                    </div>
+                    <span>Ayollar liboslari</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/boy-clothes' %}.webp" alt="Boy clothes">
+                    </div>
+                    <span>O'gil bolalar kiyimlari</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/tech.webp' %}" alt="Technologies">
+                    </div>
+                    <span>Texnologiyalar</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/furniture.webp' %}" alt="Furniture">
+                    </div>
+                    <span>Uy jihozlari</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/cosmetic.webp' %}" alt="Cosmetic">
+                    </div>
+                    <span>Kasmetika</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/car.webp' %}" alt="Car">
+                    </div>
+                    <span>Mashinalar</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/sport.webp' %}" alt="Sport">
+                    </div>
+                    <span>Sport anjomlari</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="#">
+                    <div class="category-img">
+                        <img src="{% static 'img/car.webp' %}" alt="Car">
+                    </div>
+                    <span>Mashinalar</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class="products py-3">
+        <h2 class="ms-4 fs-1">Mahsulotlar</h2>
+        <div class="products-wrap">
+            <a href="{% url 'product' %}" class="product shadow text-decoration-none text-dark rounded">
+                <div class="product-picture">
+                    <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+                </div>
+                <div class="product-info">
+                    <h3 class="product--name fs-2 mb-3">Hyundai car</h3>
+                    <p class="product--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                    <p class="product--price fw-bold">455 500 000.00 UZS</p>
+                </div>
+            </a>
+            <a href="{% url 'product' %}" class="product shadow text-decoration-none text-dark rounded">
+                <div class="product-picture">
+                    <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+                </div>
+                <div class="product-info">
+                    <h3 class="product--name fs-2 mb-3">Hyundai car</h3>
+                    <p class="product--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                    <p class="product--price fw-bold">455 500 000.00 UZS</p>
+                </div>
+            </a>
+            <a href="{% url 'product' %}" class="product shadow text-decoration-none text-dark rounded">
+                <div class="product-picture">
+                    <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+                </div>
+                <div class="product-info">
+                    <h3 class="product--name fs-2 mb-3">Hyundai car</h3>
+                    <p class="product--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                    <p class="product--price fw-bold">455 500 000.00 UZS</p>
+                </div>
+            </a>
+            <a href="{% url 'product' %}" class="product shadow text-decoration-none text-dark rounded">
+                <div class="product-picture">
+                    <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+                </div>
+                <div class="product-info">
+                    <h3 class="product--name fs-2 mb-3">Hyundai car</h3>
+                    <p class="product--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                    <p class="product--price fw-bold">455 500 000.00 UZS</p>
+                </div>
+            </a>
+            <a href="{% url 'product' %}" class="product shadow text-decoration-none text-dark rounded">
+                <div class="product-picture">
+                    <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+                </div>
+                <div class="product-info">
+                    <h3 class="product--name fs-2 mb-3">Hyundai car</h3>
+                    <p class="product--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                    <p class="product--price fw-bold">455 500 000.00 UZS</p>
+                </div>
+            </a>
+            <a href="{% url 'product' %}" class="product shadow text-decoration-none text-dark rounded">
+                <div class="product-picture">
+                    <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+                </div>
+                <div class="product-info">
+                    <h3 class="product--name fs-2 mb-3">Hyundai car</h3>
+                    <p class="product--address m-0 text-secondary fs-6">Tashkent, Qibray</p>
+                    <p class="product--price fw-bold">455 500 000.00 UZS</p>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+{% endblock content %}

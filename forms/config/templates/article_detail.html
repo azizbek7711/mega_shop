@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ {% if object.photo %}
+
+    <img src="static/images/{{ object.photo.url }}" alt=" {{ object.title }}">
+ {% endif %}
+    {{ object.title }}
+    Muallif: {{ object.author }}| {{ object.date }}
+    {{ object.body | safe }}
+<h1><a href="{% url 'article_edit' article.pk %}"> Tahrirlash</a></h1>
+<h2><a href="{% url 'article_delete' article.pk %}"> O'chirish</a></h2>
+<h3><a href="{% url 'article_list' %}"> Barcha postlar</a></h3>
+
+{% endblock %}
+

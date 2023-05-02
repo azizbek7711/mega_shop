@@ -1,0 +1,9 @@
+.products-img img {
+  width: 100px;
+  height: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.products td, .products th {
+  border: none;
+}

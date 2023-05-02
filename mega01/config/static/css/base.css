@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  margin: 0;
+}
+
+::-moz-selection {
+  color: #1A70F1;
+  background: #000;
+}
+
+::selection {
+  color: #1A70F1;
+  background: #000;
+}
+
+.navbar {
+    padding: 0 20px;
+}
+
+.nav-brand {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-search input {
+    padding-left: 35px;
+}
+.nav-search i {
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-tools button {
+    outline: none;
+    border: none;
+}
+  
+
+@media screen and (max-width: 991.5px) {
+    body {
+        padding-bottom: 50px;
+        padding-top: 54px;
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        z-index: 199;
+        padding: 10px;
+        background: #fff;
+        width: 100% !important;
+        left: 0;
+        right: 0;
+        margin: 0 !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar .nav-brand {
+        width: 25%;
+    }
+    .navbar .nav-brand img {
+        width: 150px;
+    }
+    .navbar .nav-search {
+        width: 75% !important;
+    }
+    .navbar .nav-tools {
+        width: 100%;
+        position: fixed;
+        z-index: 20;
+        bottom: 0;
+        background: #fff;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        padding: 7px 30px 0 30px;
+    }
+    .navbar .nav-tools span {
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 768.5px) {
+    .nav-brand {
+        padding: 0 5px;
+    }
+    .nav-brand img {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 375.5px) {
+    .navbar {
+        flex-wrap: nowrap;
+    }
+    .nav-brand {
+        width: 35% !important;
+    }
+    .nav-search {
+        width: 65% !important;
+    }
+    .nav-tools {
+        padding: 7px 15px 0 15px !important;
+    }
+ }

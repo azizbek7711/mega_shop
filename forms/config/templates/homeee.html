@@ -1,0 +1,30 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block title %} bosh sahifa {% endblock title %}
+
+{% block content %}
+
+   {% if user.is_authenticated %}
+       {{  user.username | title }}!
+        <h1><a href="{% url 'password_change' %}" >kalit sozini almashtisish </a></h1>
+        <h1><a href="{% url 'logout' %}" > chiqib ketish </a></h1>
+        <h3><a href="{% url 'article_list' %}"> Barcha postlar</a></h3>
+        <h1><a  href="{% url 'article_new' %}">yangi post</a></h1>
+
+   {% else %}
+        <h2>
+            <a> agar royxatdan o'tmagan bo'lsangiz</a>
+        </h2>
+        <h1>
+            <a href="{% url 'login' %}">Kirish</a>
+        </h1>
+        <h2>
+
+            <a href="{% url 'signup' %}" >Royxatdan o'tish</a>
+        </h2>
+
+   {% endif %}
+{% endblock content %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Favourites{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/favourites.css' %}"/>
+{% endblock css %}
+
+{% block content %}
+    <h1 class="p-2 ps-4">My Favourites</h2>
+    <hr class="w-75 mx-auto">
+    <div class="fav">
+        <div class="fav-item d-block d-md-flex border-bottom p-3">
+            <a class="fav--img text-decoration-none text-dark" href="#">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+            </a>
+            <div class="fav--info  position-relative">
+                <a class="text-decoration-none text-dark" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero soluta consequuntur laudantium vitae quidem magnam, facere exercitationem nobis maxime provident magni dolores nihil fugit earum deserunt incidunt quasi rerum!</a>
+                <p class="text-secondary mb-0 mt-3">Tashkent, Mirabad</p>
+                <b>55 000 000 000 sum</b>
+                <div class="fav__del mt-3 position-absolute bottom-0 end-0 text-end ">
+                    <p class="mb-1 text-secondary">Added on July 11, 2021</p>
+                    <a href="#">
+                        <img src="{% static 'img/trash.png' %}" alt="trash">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="fav-item d-block d-md-flex border-bottom p-3">
+            <a class="fav--img text-decoration-none text-dark" href="#">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+            </a>
+            <div class="fav--info  position-relative">
+                <a class="text-decoration-none text-dark" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero soluta consequuntur laudantium vitae quidem magnam, facere exercitationem nobis maxime provident magni dolores nihil fugit earum deserunt incidunt quasi rerum!</a>
+                <p class="text-secondary mb-0 mt-3">Tashkent, Mirabad</p>
+                <b>55 000 000 000 sum</b>
+                <div class="fav__del mt-3 position-absolute bottom-0 end-0 text-end ">
+                    <p class="mb-1 text-secondary">Added on July 11, 2021</p>
+                    <a href="#">
+                        <img src="{% static 'img/trash.png' %}" alt="trash">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="fav-item d-block d-md-flex border-bottom p-3">
+            <a class="fav--img text-decoration-none text-dark" href="#">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+            </a>
+            <div class="fav--info  position-relative">
+                <a class="text-decoration-none text-dark" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero soluta consequuntur laudantium vitae quidem magnam, facere exercitationem nobis maxime provident magni dolores nihil fugit earum deserunt incidunt quasi rerum!</a>
+                <p class="text-secondary mb-0 mt-3">Tashkent, Mirabad</p>
+                <b>55 000 000 000 sum</b>
+                <div class="fav__del mt-3 position-absolute bottom-0 end-0 text-end ">
+                    <p class="mb-1 text-secondary">Added on July 11, 2021</p>
+                    <a href="#">
+                        <img src="{% static 'img/trash.png' %}" alt="trash">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="fav-item d-block d-md-flex border-bottom p-3">
+            <a class="fav--img text-decoration-none text-dark" href="#">
+                <img src="{% static 'img/hyundai.jpg' %}" alt="Car">
+            </a>
+            <div class="fav--info  position-relative">
+                <a class="text-decoration-none text-dark" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero soluta consequuntur laudantium vitae quidem magnam, facere exercitationem nobis maxime provident magni dolores nihil fugit earum deserunt incidunt quasi rerum!</a>
+                <p class="text-secondary mb-0 mt-3">Tashkent, Mirabad</p>
+                <b>55 000 000 000 sum</b>
+                <div class="fav__del mt-3 position-absolute bottom-0 end-0 text-end ">
+                    <p class="mb-1 text-secondary">Added on July 11, 2021</p>
+                    <a href="#">
+                        <img src="{% static 'img/trash.png' %}" alt="trash">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

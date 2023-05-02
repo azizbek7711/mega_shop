@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <h1> yangi post </h1>
+
+   <form method="post" class="my-class"  enctype="multipart/form-data">{% csrf_token %}
+       {{ form.as_p }}
+       <button class="btn btn-success" type="submit"> Saqlash </button>
+   </form>
+{% endblock content %}
+
+

@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Mega Shop{% endblock title %}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="{% static 'img/b-logo.png' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block css %}{% endblock css %}  
+</head>
+<body>
+    <!-- ! NAV -->
+    <nav class="navbar shadow-sm bg-light">
+        <a href="{% url 'home' %}" class="nav-brand">
+            <img width="150" src="{% static 'img/b-logo.png' %}" alt="Logo">
+        </a>
+        <form method="get" class="nav-search w-50 position-relative">
+            <input type="text" name="search" class="form-control rounded-5 " placeholder="Search on MegaShop">
+            <i class="fa fa-search position-absolute"></i>
+        </form>
+        <div class="nav-tools">
+            <button class="btn">
+                <a class="text-decoration-none text-dark" href="{% url 'favourites' %}">
+                    <img width="30" src="{% static 'img/favourtites.png' %}" alt="Favourites">
+                    <br>
+                    <span>Favourite</span>
+                </a>
+            </button>
+            <button class="btn d-lg-none d-inline">
+                <a class="text-decoration-none text-dark" href="{% url 'ctg' %}">
+                    <i class="fa fa-cubes fs-4"></i>
+                    <br>
+                    <span>Category</span>
+                </a>
+            </button>
+            <button class="btn">
+                <a class="text-decoration-none text-dark" href="{% url 'cart' %}">
+                    <img width="30" src="{% static 'img/card.png' %}" alt="card">
+                    <br>
+                    <span>Cart</span>
+                </a>
+            </button>
+            <button class="btn">
+                {% if user.is_authenticated %}
+
+                  <a class="text-decoration-none text-dark" href="{% url 'profile-add' %}">
+                    <img width="30" src="{% static 'img/userIcon.png' %}" alt="user">
+                    <br>
+                    <span>Profile</span>
+                  </a>
+                {% else %}
+                <a class="text-decoration-none text-dark" href="{% url 'login' %}">
+                    <img width="30" src="{% static 'img/userIcon.png' %}" alt="user">
+                    <br>
+                    <span>Login</span>
+                </a>
+                {% endif %}
+            </button>
+        </div>
+    </nav>
+
+    {% block content %}
+        
+    {% endblock content %}
+    
+    <!-- ! Footer -->
+    <footer class="bg-dark text-light p-3 p-md-5">
+        <div class="row">
+            <div class="my-3 my-md-0 col-12 col-md-6 col-lg-4">
+                <a href="#">
+                    <img width="150" src="{% static 'img/w-logo.png' %}" alt="Logo">
+                </a>
+                <p class="fc">siz uchun qulay va sifatli xaridlar maskani</p>
+                <div class="pt-3 w-100 d-flex px-3">
+                    <a href="" class="text-decoration-none text-light d-block px-3">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="text-decoration-none text-light d-block px-3">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="text-decoration-none text-light d-block px-3">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="my-3 my-md-0 col-12 col-md-6 col-lg-4">
+                <h3>Biz bilan bog'lanish</h3>
+                <div class="d-flex py-2">
+                    <span class="pe-2 fc">Telefon:</span>
+                    <span>
+                        <a class="fc text-decoration-none" href="tel: +998901234567">+998 90 123 45 56</a>
+                        <br>
+                        <a class="fc text-decoration-none" href="tel: +998901234567">+998 90 123 45 56</a>
+                    </span>
+                </div>
+                <div class="d-flex py-2">
+                    <span class="pe-2 fc">E-mail:</span>
+                        <a class="fc text-decoration-none" href="mail: magashop@gmail.com">megashop@gmail.com</a>
+                </div>
+                <p class="fs-5 mt-2">
+                    <a class="text-decoration-none text-light" href="{% url 'login' %}">Ro'yhatdan o'tish</a>
+                </p>
+            </div>
+            <ul class="my-3 my-md-0 col-12 col-md-6 col-lg-4 list-unstyled">
+                <li class="py-1">
+                    <a class="text-decoration-none text-light fs-5" href="#">Mahsulotlar</a>
+                </li>
+                <li class="py-1">
+                    <a class="text-decoration-none text-light fs-5" href="#">Top maxsulotlar</a>
+                </li>
+                <li class="py-1">
+                    <a class="text-decoration-none text-light fs-5" href="#">Serviz xizmatlar</a>
+                </li>
+                <li class="py-1">
+                    <a class="text-decoration-none text-light fs-5" href="#">Biz bilan bog'lanish</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="w-75 mx-auto">
+        <p class="text-center opacity-75">Megashop 2022</p>
+    </footer>
+
+    <!-- ! JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+    {% block js %}{% endblock js %}
+</body>
+</html>

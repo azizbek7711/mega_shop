@@ -1,0 +1,133 @@
+.product--img img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* ! Slider */
+.activee {
+  border: 2px solid #09C733;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.grabbing {
+  cursor: -webkit-grabbing !important;
+  cursor: grabbing !important;
+}
+
+.sliderWrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.sliderWrap .slides {
+  cursor: -webkit-grab;
+  cursor: grab;
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: 0.3s;
+}
+.sliderWrap .slides .slidee {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 50px;
+  position: relative;
+  color: #fff;
+  background: #fff;
+}
+.sliderWrap .slides .slidee img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sliderWrap .slides .slidee::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.sliderWrap .slider-indicatorss {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  left: 50%;
+  margin-bottom: 20px;
+  transform: translateX(-50%);
+}
+.sliderWrap .slider-indicatorss span {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: #09C733;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-bottom: 50px;
+  }
+  .product-item {
+    padding: 0 !important;
+  }
+  .product--img {
+    width: 100% !important;
+  }
+  .product--img img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .product--info {
+    padding: 10px;
+    width: 100% !important;
+    padding-bottom: 50px;
+  }
+  .buymenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    right: 0;
+    background: #fff;
+    z-index: 10;
+  }
+  .buymenu button:first-child, .buymenu button:nth-child(2) {
+    width: 40%;
+    margin: 0 !important;
+    height: 100%;
+    border-radius: 0 !important;
+  }
+  .buymenu button:last-child {
+    width: 20%;
+    margin: 0 !important;
+    height: 100%;
+    border-radius: 0 !important;
+  }
+  .buymenu button:last-child i {
+    padding-right: 5px;
+  }
+  .buymenu button:last-child a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slidee {
+    padding: 0 !important;
+    padding-bottom: 50px !important;
+  }
+}/*# sourceMappingURL=style.css.map */

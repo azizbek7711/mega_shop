@@ -1,0 +1,76 @@
+{% extends 'profile.html' %}
+{% load static %}
+
+{% block title %}Profile Settings{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/profile-settings.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <article>
+        <h2 class="border-bottom w-100 p-3 ps-4">Seller Settings</h2>
+        <div>
+            <h4 class="ps-3">
+                <span>
+                    <img src="{% static 'img/account.png' %}" alt="Account">
+                </span>    
+                Account Settings
+            </h4>
+            <form method="post" class="row g-0">
+                <div class="col-12 col-md-6 ps-5 pt-4">
+                    <div class="profile-img">
+                        <div>
+                            <img src="{% static 'img/user.png' %}" alt="user img">
+                            <span class="">
+                                <input type="file" name="profileImg">
+                                <img width="30" src="{% static 'img/camera.png' %}" alt="camera">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="mb-0">Change phone number</p>
+                        <span class="position-relative">
+                            <img src="{% static 'img/uzb.png' %}" width="24" class="ms-1 position-absolute start-0 top-0" style="transform: translateY(-1px)" alt="flag">
+                            <input type="text" class="phone border border-1 py-1 rounded-1" name="phone" style="padding-left: 32px;">
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bu qismini oziz bir nima qilarsiz -->
+                <div class="col-12 col-md-6">
+                    <label>
+                        <span>
+                            <img src="{% static 'img/userIcon.png' %}" alt="user icon">
+                        </span>
+                        <input class="form-control" type="text" name="userName" placeholder="Enter a login">
+                    </label>
+                    <label>
+                        <span>
+                            <i class="ps-2 fa fa-eye"></i>
+                        </span>
+                        <input class="form-control" type="password" name="oldPassword" placeholder="Enter a login">
+                    </label>
+                    <label>
+                        <span>
+                            <i class="ps-2 fa fa-eye"></i>
+                        </span>
+                        <input class="form-control" type="password" name="newPassord" placeholder="Enter a login">
+                    </label>
+                    <label>
+                        <span>
+                            <i class="ps-2 fa fa-eye"></i>
+                        </span>
+                        <input class="form-control" type="password" name="reNewPassword" placeholder="Enter a login">
+                    </label>
+                </div>
+                <button class="sbm btn btn-primary form-control w-25 m-3 mt-5">Save Changes</button>
+            </form>
+        </div>
+    </article>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script>
+        $('.phone').inputmask("+999(99) 999-99-99");
+    </script>
+{% endblock content %}

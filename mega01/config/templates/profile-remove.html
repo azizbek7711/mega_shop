@@ -1,0 +1,138 @@
+{% extends 'profile.html' %}
+{% load static %}
+
+{% block title %}Remove Product{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/profile-remove.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <article>
+        <h2 class="border-bottom w-100 p-3 ps-4">Seller Settings</h2>
+        <div>
+            <h4 class="ps-4 pt-3">
+                <span>
+                    <img width="30 pe-2" src="{% static 'img/products.png' %}" alt="Products">
+                </span>
+                Products previously posted
+            </h4>
+            <table class="table products">
+                <thead>
+                    <tr>
+                        <th class="col"></th>
+                        <th class="col">Name</th>
+                        <th class="col">Price</th>
+                        <th class="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="products-img text-center">
+                            <img src="{% static 'img/product.png' %}" alt="product">
+                        </td>
+                        <td class="pt-3">Soft</td>
+                        <td class="pt-3">
+                            <b>0 000 000 sum</b>
+                        </td>
+                        <td class="pt-3">
+                            <a href="#">
+                                <img src="{% static 'img/trash.png' %}" alt="Trash">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="products-img text-center">
+                            <img src="{% static 'img/product.png' %}" alt="product">
+                        </td>
+                        <td class="pt-3">Soft</td>
+                        <td class="pt-3">
+                            <b>0 000 000 sum</b>
+                        </td>
+                        <td class="pt-3">
+                            <a href="#">
+                                <img src="{% static 'img/trash.png' %}" alt="Trash">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="products-img text-center">
+                            <img src="{% static 'img/product.png' %}" alt="product">
+                        </td>
+                        <td class="pt-3">Soft</td>
+                        <td class="pt-3">
+                            <b>0 000 000 sum</b>
+                        </td>
+                        <td class="pt-3">
+                            <a href="#">
+                                <img src="{% static 'img/trash.png' %}" alt="Trash">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="products-img text-center">
+                            <img src="{% static 'img/product.png' %}" alt="product">
+                        </td>
+                        <td class="pt-3">Soft</td>
+                        <td class="pt-3">
+                            <b>0 000 000 sum</b>
+                        </td>
+                        <td class="pt-3">
+                            <a href="#">
+                                <img src="{% static 'img/trash.png' %}" alt="Trash">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h4 class="ps-4 pt-3">
+                <span>
+                    <img width="30 pe-2" src="{% static 'img/oldDel.png' %}" alt="Previously deleted products">
+                </span>
+                Previously deleted products
+            </h3>
+            <table class="table products">
+                <thead>
+                    <tr>
+                        <th class="col"></th>
+                        <th class="col">Name</th>
+                        <th class="col">Price</th>
+                        <th class="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="products-img text-center">
+                            <img src="{% static 'img/product.png' %}" alt="product">
+                        </td>
+                        <td class="pt-3">Soft</td>
+                        <td class="pt-3">
+                            <b>0 000 000 sum</b>
+                        </td>
+                        <td class="pt-3">
+                            <a href="#">
+                                <img src="{% static 'img/add.png' %}" alt="Trash">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="products-img text-center">
+                            <img src="{% static 'img/product.png' %}" alt="product">
+                        </td>
+                        <td class="pt-3">Soft</td>
+                        <td class="pt-3">
+                            <b>0 000 000 sum</b>
+                        </td>
+                        <td class="pt-3">
+                            <a href="#">
+                                <img src="{% static 'img/add.png' %}" alt="Trash">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+{% endblock content %}
